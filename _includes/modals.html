@@ -1,0 +1,52 @@
+<!-- Portfolio Modals -->
+{% for post in site.posts %}
+    <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal svg" data-dismiss="modal">
+                <object type="image/svg+xml" data="svg/close.svg" class="close"><div class="close-fallback"></div></object>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>{{ post.title }}</h2>
+                            <div id="{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="{{ post.modal-id | prepend: '#'}}" data-slide-to="0" class="active"></li>
+                                    <li data-target="{{ post.modal-id | prepend: '#'}}" data-slide-to="1"></li>
+                                    <li data-target="{{ post.modal-id | prepend: '#'}}" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="img/portfolio/{{ post.img1 }}" class="img-responsive img-centered" alt="{{ post.alt1 }}">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/portfolio/{{ post.img2 }}" class="img-responsive img-centered" alt="{{ post.alt2 }}">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/portfolio/{{ post.img3 }}" class="img-responsive img-centered" alt="{{ post.alt3 }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="portfolio-p">{{ post.description }}</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong>{{ post.client }}</strong>
+                                </li>
+                                <li>Date:
+                                    <strong>{{ post.project-date }}</strong>
+                                </li>
+                                <li>Service:
+                                    <strong>{{ post.category }}</strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

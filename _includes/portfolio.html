@@ -1,0 +1,12 @@
+<section id="portfolio" class="container content-section text-center">
+	<div class="row">
+	        <h2>Portfolio</h2>
+	    	{% for post in site.posts %}
+	        <div class="col-sm-4 portfolio-item">
+	            <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+	                <img src="img/portfolio/{{ post.thumb }}" class="img-responsive" alt="{{ post.alt }}">
+	            </a>
+	        </div>
+        {% endfor %}
+    </div>
+</section>

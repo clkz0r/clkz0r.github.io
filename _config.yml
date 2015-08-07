@@ -1,0 +1,18 @@
+# Site settings
+title: Andrew Clark
+email: contact@andrewclarkdesign.com.au
+url: https://www.andrewclarkdesign.com.au
+description: "UI Designer & Front-End Developer based in Melbourne, Australia"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-light: '#ffffff'
+  primary-hero: '#b31d02'
+  links: '#e12200'
+
+# Footer settings
+footer: Andrew Clark
+
+# Build settings
+markdown: kramdown
+permalink: pretty
